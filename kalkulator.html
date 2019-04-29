@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kalkulator</title>
+    <style>
+        table {
+	border : none;
+	border-collapse: collapse;
+}
+td{
+	padding: 5px;
+	border: none;
+}
+input[type=text]{
+	padding: 10px;
+	width: 410px;
+	border-style: solid;
+	text-align: right;
+	font-size: 16px;
+}
+input[type=text]:disabled{
+	background-color: white;
+}
+.numb {
+	width: 100px;
+	height: 40px;
+	background-color: rgb(94, 161, 206);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.opr{
+		background-color: #555555;
+}
+.c{
+	background-color: #f44336;;
+}
+.hsl{
+	background-color: #008CBA;
+}
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <input type="text" disabled id="output" value="0">
+			</td>
+		</tr>
+		<tr>
+			<td><button class="numb" onclick="numb('1')">1</button></td>
+			<td><button class="numb" onclick="numb('2')">2</button></td>
+			<td><button class="numb" onclick="numb('3')">3</button></td>
+			<td><button class="numb opr" onclick="numb_opr(1)">*</button></td>
+		</tr>
+		<tr>
+			<td><button class="numb" onclick="numb('4')">4</button></td>
+			<td><button class="numb" onclick="numb('5')">5</button></td>
+			<td><button class="numb" onclick="numb('6')">6</button></td>
+			<td><button class="numb opr" onclick="numb_opr(2)">/</button></td>
+		</tr>
+		<tr>
+			<td><button class="numb" onclick="numb('7')">7</button></td>
+			<td><button class="numb" onclick="numb('8')">8</button></td>
+			<td><button class="numb" onclick="numb('9')">9</button></td>
+			<td><button class="numb opr" onclick="numb_opr(3)">-</button></td>
+		</tr>
+		<tr>
+			<td><button class="numb" onclick="numb('0')">0</button></td>
+			<td><button class="numb" onclick="koma()">.</button></td>
+			<td><button class="numb c" onclick="c()">C</button></td>
+			<td><button class="numb opr" onclick="numb_opr(4)">+</button></td>
+		</tr>
+		<tr>
+			<td colspan="5"><button class="numb hsl" style="width: 100%" onclick="hitung()">=</button></td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="kalkulator.js"></script>
+</body>
+</html>
